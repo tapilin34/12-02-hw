@@ -1,15 +1,42 @@
-# Домашнее задание к занятию "`Введение в SQL`" - `Тапилин Артём`
+# Домашнее задание к занятию «Введение в SQL»
 
-### Задание 1
-![Создал учётную запись sys_temp](https://github.com/tapilin34/12-02-hw/blob/main/img/users-add.jpg)
-![Добавил права пользователю](https://github.com/tapilin34/12-02-hw/blob/main/img/users-grant.jpg)
-![Импортировал БД](https://github.com/tapilin34/12-02-hw/blob/main/img/db-import-diagram.jpg)
-![Вывод в виде таблицы](https://github.com/tapilin34/12-02-hw/blob/main/img/db-import.jpg)
+**Студент:** Тапилин Артём
 
-### Задание 2
-![Таблица сопоставления полей](https://github.com/tapilin34/12-02-hw/blob/main/img/db-tables.jpg)
+## Задание 1
 
-### Задание 3
-Команда для отзыва прав на внесение, изменение и удаление данных из базы sakila.
+1. Создана учётная запись `sys_temp`.
+2. Пользователю выданы необходимые права доступа.
+3. Выполнен импорт учебной базы данных `sakila`.
+4. Проверен вывод данных в табличном виде.
+
+### Скриншоты
+
+![Создание учётной записи sys_temp](./img/users-add.jpg)
+
+![Выдача прав пользователю sys_temp](./img/users-grant.jpg)
+
+![Импорт базы данных](./img/db-import-diagram.jpg)
+
+![Вывод данных в виде таблицы](./img/db-import.jpg)
+
+## Задание 2
+
+Составлена таблица сопоставления полей.
+
+### Скриншот
+
+![Таблица сопоставления полей](./img/db-tables.jpg)
+
+## Задание 3
+
+У пользователя `sys_temp` отозваны права на внесение, изменение и удаление данных из базы `sakila`.
+
+### SQL-запрос
+
+```sql
 REVOKE INSERT, UPDATE, DELETE ON sakila.* FROM 'sys_temp'@'%';
-![Выполните запрос на получение списка прав для пользователя sys_temp](https://github.com/tapilin34/12-02-hw/blob/main/img/users-after-revoke.jpg)
+```
+
+### Скриншот
+
+![Права пользователя sys_temp после отзыва привилегий](./img/users-after-revoke.jpg)
